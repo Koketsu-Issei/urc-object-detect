@@ -14,7 +14,7 @@ class ObjectDetection(Node):
     def __init__(self, **args):
         super().__init__('object_detection')
 
-        self.detection_model = YOLO("yolov8m.pt")
+        self.detection_model = YOLO("/home/koketsu_issei/camera_ws/src/chapter5/yolov8_ros2/models/best.pt")
 
         self.bridge = CvBridge()
 
