@@ -23,6 +23,17 @@
   ```
   ros2 run usb_cam usb_cam_node_exe
   ```
+
+  ```
+  ros2 run usb_cam usb_cam_node_exe \
+  --ros-args \
+  -p video_device:=/dev/video2 \
+  -p image_width:=640 \
+  -p image_height:=480 \
+  -p framerate:=30.0 \
+  -p pixel_format:=uyvy
+  ```
+  
 - 端末2：プログラムを実行
   ```
   ros2 run yolov8_ros2 object_detection
