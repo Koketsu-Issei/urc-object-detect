@@ -173,3 +173,62 @@ echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 echo 'source ~/camera_ws/install/setup.bash' >> ~/.bashrc
 source ~/.bashrc
 ```
+
+
+# 学習方法
+デスクトップで学習するための手順を示す。できるかは不明。
+
+## 1.環境構築
+### pythonの確認
+```
+python3 --version
+```
+```
+Python 3.x.x
+```
+と出ればOK。よっぽど入ってる。
+
+### PyTorch確認
+```
+python3 -c "import torch; print('PyTorch:', torch.__version__); print('CUDA:', torch.cuda.is_available())"
+```
+```
+PyTorch: 2.x.x
+CUDA: True
+```
+こうなったら入ってる。
+
+```
+ModuleNotFoundError: No module named 'torch'
+```
+### Ultralytics確認
+```
+python3 -c "from ultralytics import YOLO; print('Ultralytics OK')"
+```
+```
+Ultralytics OK
+```
+これなら使える。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
