@@ -196,7 +196,7 @@ python3 -c "import torch; print('PyTorch:', torch.__version__); print('CUDA:', t
 PyTorch: 2.x.x
 CUDA: True
 ```
-こうなったら入ってる。
+こうなったら入ってる。CUDA: False　でも可能。
 
 ```
 ModuleNotFoundError: No module named 'torch'
@@ -210,9 +210,23 @@ Ultralytics OK
 ```
 これなら使える。
 
+## 2．データセットのダウンロード
+roboflowからデータセットをダウンロードする。
 
-
-
+## 3.学習
+まず、リンゴの data.yaml のある場所に移動する
+```
+find ~ -name "data.yaml" 2>/dev/null
+```
+結果が出たら
+```
+cd ~/結果
+```
+で移動する。
+```
+yolo detect train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640 device=0
+```
+これで学習が始まる。かなり時間がかかる。
 
 
 
