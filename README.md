@@ -224,7 +224,7 @@ cd ~/Dwonloads/...
 ```
 で移動する。data.yaml　の1つ手間前まで移動。
 ```
-yolo detect train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640 device=0
+yolo detect train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640
 ```
 これで学習が始まる。かなり時間がかかる。
 
@@ -236,6 +236,13 @@ best.pt完成。
 このコードを修正してリンゴ検出専用に作り替える。
 
 ## 5.コードの修正
+以下でディレクトリを移動してコードを編集する。
+```
+cd ~/xxxx_ws/src/urc-object-detect/yolov8_ros2/yolov8_ros2
+code .
+```
+5.モデルパスの設定に戻って進める
+
 
 
 
